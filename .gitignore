@@ -11,6 +11,4 @@ __pycache__/
 # Ignore Node.js dependencies
 node_modules/
 
-# Ignore virtual environment
-# # Ignore environment variable files (important for security)
-# .env
+
