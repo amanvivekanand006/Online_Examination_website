@@ -8,7 +8,7 @@ export default function Students() {
     const[search,setSearch] = useState("")
     const[Users, setUsers] = useState([])
     useEffect(()=>{
-        fetch('http://127.0.0.1:8000/api/get_all_users/')
+        fetch('https://online-examination-website-backend-1.onrender.com/api/get_all_users/')
         .then(response=>response.json())
         .then((data)=>{
             console.log("fetched users:", data)

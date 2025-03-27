@@ -21,7 +21,7 @@ export default function Addtest() {
     const handleSubmit=(e)=>{
         e.preventDefault()
         console.log(form)
-        axios.post("http://127.0.0.1:8000/api/addquestion/",form)
+        axios.post("https://online-examination-website-backend-1.onrender.com/api/addquestion/",form)
         .then((response)=>{
             console.log(response.data)
         })

@@ -12,7 +12,7 @@ export default function Tutorsubjects() {
     
     const del_sub=(subjectId)=>{
         if (window.confirm("Are you sure you want to delete this subject?")) {
-            axios.delete(`http://127.0.0.1:8000/api/del_subject/${subjectId}/`)
+            axios.delete(`https://online-examination-website-backend-1.onrender.com/api/del_subject/${subjectId}/`)
                 .then(() => {
                     console.log(`Subject with ID ${subjectId} deleted`);
 
@@ -25,7 +25,7 @@ export default function Tutorsubjects() {
     };
 
             useEffect(()=>{
-                fetch("http://127.0.0.1:8000/api/sub/")
+                fetch("https://online-examination-website-backend-1.onrender.com/api/sub/")
                 .then(response => response.json())
                 .then((sub) => {
                     console.log("Fetched subjects:", sub);

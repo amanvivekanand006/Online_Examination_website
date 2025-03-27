@@ -21,7 +21,7 @@ export default function Register_form() {
     const handleSubmit= (e)=>{
       e.preventDefault()
       console.log(form)
-      axios.post("http://127.0.0.1:8000/api/register_user/", form)
+      axios.post("https://online-examination-website-backend-1.onrender.com/api/register_user/", form)
       .then((response)=>{
         console.log(response.data)
       })

@@ -36,7 +36,7 @@ export default function Tutorquestions() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Updated Questions:", questions);
-    axios.put(`http://127.0.0.1:8000/api/update_test_questions/${id}/`, questions)
+    axios.put(`https://online-examination-website-backend-1.onrender.com/api/update_test_questions/${id}/`, questions)
       .then((response) => {
         console.log("Saved Successfully:", response.data);
         alert("Questions updated successfully!");
@@ -49,7 +49,7 @@ export default function Tutorquestions() {
 
   // Fetch initial questions data
   useEffect(() => {
-    fetch(`http://127.0.0.1:8000/api/update_test_questions/${id}/`)
+    fetch(`https://online-examination-website-backend-1.onrender.com/api/update_test_questions/${id}/`)
       .then((response) => response.json())
       .then((data) => {
         console.log("Fetched Questions:", data);

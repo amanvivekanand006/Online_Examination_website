@@ -5,7 +5,7 @@ import './Css/Marks.css'
 export default function Users() {
     const [Users,setUsers] = useState([])
     useEffect(()=>{
-        axios.get("http://127.0.0.1:8000/api/get_all_users/")
+        axios.get("https://online-examination-website-backend-1.onrender.com/api/get_all_users/")
         .then((response)=>{
             console.log("all users:",response.data)
             setUsers(response.data)

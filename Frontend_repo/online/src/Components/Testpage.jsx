@@ -37,7 +37,7 @@ function Testpage() {
     const token = localStorage.getItem("access_token")
     console.log(token)
     console.log(form)
-    axios.post(`http://127.0.0.1:8000/api/Taking_ans/${subject}/`,
+    axios.post(`https://online-examination-website-backend-1.onrender.com/api/Taking_ans/${subject}/`,
       form,
       {
           headers: {
@@ -64,7 +64,7 @@ function Testpage() {
 
 
   useEffect(()=>{
-    fetch(`http://127.0.0.1:8000/api/update_test_questions/${id}/`)
+    fetch(`https://online-examination-website-backend-1.onrender.com/api/update_test_questions/${id}/`)
     .then(response => response.json())
     .then((data) => {
        setData(data)

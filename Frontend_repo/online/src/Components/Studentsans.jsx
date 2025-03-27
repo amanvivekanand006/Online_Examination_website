@@ -18,7 +18,7 @@ export default function Studentsans() {
   const handleSubmit=(e)=>{
     e.preventDefault()
     console.log(marks)
-    axios.post(`http://127.0.0.1:8000/api/update_student_score/${subject}/${id}/`,marks,{ headers: { "Content-Type": "application/json" } })
+    axios.post(`https://online-examination-website-backend-1.onrender.com/api/update_student_score/${subject}/${id}/`,marks,{ headers: { "Content-Type": "application/json" } })
     .then((response)=>{
       console.log(response)
       setMessage("Marks have been saved successfully!"); // Show success message
@@ -31,7 +31,7 @@ export default function Studentsans() {
   }
 
   useEffect(()=>{
-      fetch(`http://127.0.0.1:8000/api/student_ans/${subject}/${id}`)
+      fetch(`https://online-examination-website-backend-1.onrender.com/api/student_ans/${subject}/${id}`)
       .then(response=>response.json())
       .then((data)=>{
          console.log("Fetched subjects:", data);
@@ -39,7 +39,7 @@ export default function Studentsans() {
       .catch(error => console.error("Error fetching data:", error));
 
 
-      fetch(`http://127.0.0.1:8000/api/get_test_question/${subject}/`)
+      fetch(`https://online-examination-website-backend-1.onrender.com/api/get_test_question/${subject}/`)
       .then(response=>response.json())
       .then((data)=>{
          console.log("Fetched questions:", data);

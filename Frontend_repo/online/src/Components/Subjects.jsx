@@ -14,7 +14,7 @@ const handleSubjectClick = (subjectName) => {
 const Subjects = () =>{
     const[data,setData] = useState({subjects:[]})
         useEffect(()=>{
-            fetch("http://127.0.0.1:8000/api/sub/")
+            fetch("https://online-examination-website-backend-1.onrender.com/api/sub/")
             .then(response => response.json())
             .then((sub) => {
                 console.log("Fetched subjects:", sub);

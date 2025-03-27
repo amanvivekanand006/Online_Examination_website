@@ -7,7 +7,7 @@ export default function Marks() {
     const[Users, setUsers] =useState([])
     const[Marks, setMarks] = useState([])
     useEffect(()=>{
-        fetch("http://127.0.0.1:8000/api/get_all_users/")
+        fetch("https://online-examination-website-backend-1.onrender.com/api/get_all_users/")
           .then(respone => respone.json())
           .then((users)=>{
                  console.log("fetched users:", users)
@@ -15,7 +15,7 @@ export default function Marks() {
           .catch(error => console.error("Error fetching data:", error))
 
         
-        fetch("http://127.0.0.1:8000/get_marks/")
+        fetch("https://online-examination-website-backend-1.onrender.com/get_marks/")
           .then(response=> response.json())
           .then((usersmarks)=>{
             console.log("all marks:", usersmarks)

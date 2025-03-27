@@ -7,7 +7,7 @@ export default function Studentssub() {
   const { id } = useParams(); 
   const[data,setData] = useState({ subjects: [], student_id: null })
           useEffect(()=>{
-              fetch(`http://127.0.0.1:8000/api/student_subjects/${id}/`)
+              fetch(`https://online-examination-website-backend-1.onrender.com/api/student_subjects/${id}/`)
               .then(response => response.json())
               .then((sub) => {
                   console.log("Fetched subjects:", sub);

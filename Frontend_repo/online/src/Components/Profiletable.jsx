@@ -11,7 +11,7 @@ function ProfileTable() {
   }, []);
 
   const fetchProfiles = () => {
-    axios.get("http://127.0.0.1:8000/api/get_users_profile")
+    axios.get("https://online-examination-website-backend-1.onrender.com/api/get_users_profile")
       .then((response) => {
         console.log(response.data)
         setProfiles(response.data);
@@ -23,7 +23,7 @@ function ProfileTable() {
 
   const handleUserTypeChange = (profileId, newType) => {
     axios
-      .put(`http://127.0.0.1:8000/api/update_user_type/${profileId}/`, {
+      .put(`https://online-examination-website-backend-1.onrender.com/api/update_user_type/${profileId}/`, {
         user_type: newType,
       })
       .then(() => {
