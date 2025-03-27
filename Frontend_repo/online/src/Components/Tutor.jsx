@@ -12,7 +12,7 @@ export default function Tutor() {
       <section id="tutor-home">
         <div className="tutor-hero">
           {/* <img src={tutor}/> */}
-        <video autoPlay muted loop><source src={tutorvideo} type="video/mp4" /></video>
+        <video autoPlay muted loop><source src="/videos/tutorvideo.mp4" type="video/mp4" /></video>
         </div>
         <div className="tutor-welcome">
           <h2 className='animate__animated animate__shakeY'
