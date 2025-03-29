@@ -1,13 +1,10 @@
 import React from "react";
-import { useState } from "react";
 import "./Css/LandingPage.css";
 import Landingnav from "./Landingnav";
 import Landinghome from "./Landinghome";
 import Landingabout from "./Landingabout";
 import Landingblog from "./Landingblog";
 import Landingcontact from "./Landingcontact";
-import { ToastContainer, toast } from "react-toastify"; // Import react-toastify
-import "react-toastify/dist/ReactToastify.css"; // Import the CSS for toast styles
 
 
 const Footer = () => {  
@@ -33,8 +30,6 @@ const LandingPage = () => {
       <Landingcontact />
       </div>
       <Footer />
-      <ToastContainer />
-
     </div>
   );
 };
