@@ -3,6 +3,8 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import './Css/Login.css'
 import { Link } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify"; // Import react-toastify
+import "react-toastify/dist/ReactToastify.css"; // Import the CSS for toast styles
 
 const Login_page = () => {
     const [formData, setFormData] = useState({
@@ -29,6 +31,16 @@ const Login_page = () => {
             localStorage.setItem("refresh_token", response.data.refresh);
             localStorage.setItem("student_id", response.data.student_id);
 
+            // Show success toast
+            toast.success("Login successful!", {
+                position: "top-right",
+                autoClose: 3000, // Close after 3 seconds
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+            });
+
             if (response.data.user_type === "tutor") {
                 navigate("/tutor"); // Redirect to tutor page
             } else if (response.data.user_type === "admin") {
@@ -38,7 +50,18 @@ const Login_page = () => {
             }
         } catch (error) {
             console.error(error.response.data);
-            setMessage(error.response.data.error || "Something went wrong!");
+            const errorMessage = error.response.data.error || "Something went wrong!";
+            setMessage(errorMessage);
+            
+            // Show error toast
+            toast.error(errorMessage, {
+                position: "top-right",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+            });
         }
     };
 
@@ -59,6 +82,8 @@ const Login_page = () => {
             <Link to="/register">Signup</Link>
           </p>
        </div>
+
+       <ToastContainer />
         </div>
         </div>
 
