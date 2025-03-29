@@ -1,5 +1,4 @@
 import React from 'react'
-import land from "./Images/land.mp4"
 import "./Css/LandingPage.css";
 
 
@@ -10,7 +9,7 @@ export default function Landinghome() {
       <section id="landing-home" className="section ">
             <div class="video-container">
               <video autoPlay muted loop>
-                 <source src={`${process.env.PUBLIC_URL}/videos/land.mp4`} type="video/mp4"/>
+                 <source src="/videos/land.mp4" type="video/mp4"/>
                  Your browser does not support the video tag.
                </video>
                </div>

@@ -1,7 +1,6 @@
 import React from 'react'
 import pic2 from './Images/pic2.jpg'
 import tutor from './Images/tutor.jpg'
-import tutorvideo from './Images/tutorvideo.mp4'
 import './Css/Tutor.css'
 import 'animate.css';
 
@@ -12,7 +11,7 @@ export default function Tutor() {
       <section id="tutor-home">
         <div className="tutor-hero">
           {/* <img src={tutor}/> */}
-        <video autoPlay muted loop><source src={`${process.env.PUBLIC_URL}/videos/tutorvideo.mp4`} type="video/mp4" /></video>
+        <video autoPlay muted loop><source src="/videos/tutorvideo.mp4" type="video/mp4" /></video>
         </div>
         <div className="tutor-welcome">
           <h2 className='animate__animated animate__shakeY'
